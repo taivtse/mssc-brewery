@@ -1,6 +1,5 @@
-package guru.springframework.msscbrewery.service.impl;
+package guru.springframework.msscbrewery.service;
 
-import guru.springframework.msscbrewery.service.CustomerService;
 import guru.springframework.msscbrewery.web.model.CustomerDto;
 import org.springframework.stereotype.Service;
 

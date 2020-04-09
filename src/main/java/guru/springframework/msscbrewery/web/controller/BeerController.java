@@ -14,6 +14,7 @@ import java.util.UUID;
  * @author taivo
  * @since 040/9/2020 16:47
  */
+@Deprecated
 @RestController
 @RequestMapping("/api/v1/beer")
 public class BeerController {
