@@ -26,13 +26,13 @@ public class CustomerController {
 
     @GetMapping("/{customerId}")
     public ResponseEntity<CustomerDto> getCustomer(@PathVariable("customerId") UUID customerId) {
-
-        return ResponseEntity.status(HttpStatus.OK).body(customerService.getCustomerById(customerId));
+        CustomerDto customerDto = customerService.getById(customerId);
+        return ResponseEntity.status(HttpStatus.OK).body(customerDto);
     }
 
     @PostMapping
     public ResponseEntity<CustomerDto> createCustomer(@RequestBody CustomerDto customerDto) {
-        CustomerDto savedCustomer = customerService.saveCustomer(customerDto);
+        CustomerDto savedCustomer = customerService.save(customerDto);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(URI.create("/api/v1/customer/" + savedCustomer.getId()));
@@ -46,7 +46,7 @@ public class CustomerController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void updateCustomer(@PathVariable("customerId") UUID customerId,
                                      @RequestBody CustomerDto customerDto) {
-        customerService.updateCustomer(customerId, customerDto);
+        customerService.update(customerId, customerDto);
     }
 
     @DeleteMapping("/{customerId}")

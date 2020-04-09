@@ -13,7 +13,7 @@ import java.util.UUID;
 @Service
 public class BeerServiceImpl implements BeerService {
     @Override
-    public BeerDto getBeerById(UUID beerId) {
+    public BeerDto getById(UUID beerId) {
         return BeerDto.builder()
                 .id(UUID.randomUUID())
                 .name("Galaxy Cat")
@@ -22,14 +22,14 @@ public class BeerServiceImpl implements BeerService {
     }
 
     @Override
-    public BeerDto saveBeer(BeerDto beerDto) {
+    public BeerDto save(BeerDto beerDto) {
         return BeerDto.builder()
                 .id(UUID.randomUUID())
                 .build();
     }
 
     @Override
-    public void updateBeer(UUID beerId, BeerDto beerDto) {
+    public void update(UUID beerId, BeerDto beerDto) {
 
     }
 

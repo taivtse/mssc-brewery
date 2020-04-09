@@ -13,7 +13,7 @@ import java.util.UUID;
 @Service
 public class CustomerServiceImpl implements CustomerService {
     @Override
-    public CustomerDto getCustomerById(UUID customerId) {
+    public CustomerDto getById(UUID customerId) {
         return CustomerDto.builder()
                 .id(UUID.randomUUID())
                 .name("Vo Thanh Tai")
@@ -21,14 +21,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public CustomerDto saveCustomer(CustomerDto beerDto) {
+    public CustomerDto save(CustomerDto beerDto) {
         return CustomerDto.builder()
                 .id(UUID.randomUUID())
                 .build();
     }
 
     @Override
-    public void updateCustomer(UUID customerId, CustomerDto beerDto) {
+    public void update(UUID customerId, CustomerDto beerDto) {
 
     }
 
