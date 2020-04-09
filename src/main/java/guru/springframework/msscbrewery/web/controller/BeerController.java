@@ -13,7 +13,7 @@ import java.util.UUID;
 
 /**
  * @author taivo
- * @since 4/9/2020 4:47 PM
+ * @since 040/9/2020 16:47
  */
 @RestController
 @RequestMapping("/api/v1/beer")
